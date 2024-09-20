@@ -70,6 +70,20 @@ header nav ul li a {
     max-width: 1200px;  /* Limits the width of the grid to maintain design integrity */
 }
 
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates four columns of equal width */
+    gap: 10px; /* Adds space between the videos */
+    padding: 20px; /* Padding around the grid for spacing from other content */
+    max-width: 1200px; /* Restricts the maximum width of the grid */
+    margin: auto; /* Centers the grid horizontally */
+}
+
+.video-grid iframe {
+    width: 100%; /* Ensures each video takes the full width of its column */
+    height: 250px; /* Fixed height for all videos */
+}
+
 @media (max-width: 768px) {
     .photo-grid {
         grid-template-columns: 1fr;  /* Adjusts grid to single column for mobile */
