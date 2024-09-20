@@ -6,7 +6,7 @@
     <title>Adventurous Data Analyst and Photographer</title>
     <link rel="stylesheet" href="styles.css">
     <link href="path_to_lightbox.css" rel="stylesheet">
-    <script src="path_to_lightbox.js"></script>
+    <script src="path_to_lightbox.js" defer></script>
 </head>
 <body>
     <header>
@@ -19,30 +19,33 @@
             </ul>
         </nav>
     </header>
-    <section id="hero">
-    <div class="hero-content">
-        <h1>Welcome to My World</h1>
-        <p>Exploring the intersection of data and lens.</p>
-    </div>
-    <video autoplay muted loop id="myVideo">
-        <source src="path_to_your_video.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-    </video>
-    </section>
-    <section id="portfolio">
-        <h2>Photography Portfolio</h2>
-        <div class="photo-grid">
-            <a href="full_image_1.jpg" data-lightbox="portfolio" data-title="My caption">
-                <img src="thumb_image_1.jpg" alt="Description">
-            </a>
-            <!-- Repeat for other images -->
-        </div>
-    </section>
-    <section id="projects">
-        <h2>Data Analytics Projects</h2>
-        <!-- Project details here -->
-        <canvas id="myChart"></canvas>
-    </section>
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Welcome to My World</h1>
+                <p>Exploring the intersection of data and lens.</p>
+            </div>
+            <video autoplay muted loop id="myVideo" controls>
+                <source src="path_to_your_video.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </section>
+        <section id="portfolio">
+            <h2>Photography Portfolio</h2>
+            <div class="photo-grid">
+                <a href="full_image_1.jpg" data-lightbox="portfolio" data-title="My caption">
+                    <img src="thumb_image_1.jpg" alt="A stunning view captured in my journey">
+                </a>
+                <!-- Additional images can be added here following the same format -->
+            </div>
+        </section>
+        <section id="projects">
+            <h2>Data Analytics Projects</h2>
+            <p>Explore the projects that illustrate the power of data in storytelling.</p>
+            <canvas id="myChart"></canvas>
+            <!-- Setup your Chart.js or any other visualizations here -->
+        </section>
+    </main>
     <footer>
         <p>Contact me at <a href="mailto:injuu8@gmail.com">injuu8@gmail.com</a></p>
     </footer>
