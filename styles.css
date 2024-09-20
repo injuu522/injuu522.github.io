@@ -1,7 +1,8 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;  /* Ensure the font-family is properly declared */
+    background: #f4f4f4;  /* A light background for the overall page to improve readability */
 }
 
 header {
@@ -9,11 +10,15 @@ header {
     color: #fff;
     padding: 10px 20px;
     text-align: center;
+    position: sticky;  /* Makes the header stick to the top when scrolling */
+    top: 0;
+    z-index: 1000;  /* Ensures the header stays above other content */
 }
 
 header nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;  /* Reset margin for better spacing control */
 }
 
 header nav ul li {
@@ -24,6 +29,8 @@ header nav ul li {
 header nav ul li a {
     color: #fff;
     text-decoration: none;
+    padding: 10px;  /* Padding for better clickability */
+    display: inline-block;  /* Helps in applying padding and transitions */
 }
 
 #hero {
@@ -34,6 +41,8 @@ header nav ul li a {
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-size: cover;  /* Ensures the video or image covers the whole section */
+    background-position: center;  /* Centers the background image or video */
 }
 
 #hero video {
@@ -42,10 +51,14 @@ header nav ul li a {
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
+    object-fit: cover;  /* Ensures the video covers the space without distortion */
 }
 
 .hero-content {
     z-index: 10;
+    padding: 20px;  /* Adds padding to ensure content is not flush against the edges */
+    background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent background for better readability */
+    border-radius: 10px;  /* Adds rounded corners to the content background */
 }
 
 .photo-grid {
@@ -53,11 +66,13 @@ header nav ul li a {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     padding: 20px;
+    margin: auto;  /* Centers the grid within the section */
+    max-width: 1200px;  /* Limits the width of the grid to maintain design integrity */
 }
 
 @media (max-width: 768px) {
     .photo-grid {
-        grid-template-columns: 1fr; /* Makes the grid single column on smaller screens */
+        grid-template-columns: 1fr;  /* Adjusts grid to single column for mobile */
     }
 
     header nav ul {
@@ -65,8 +80,9 @@ header nav ul li a {
     }
 
     header nav ul li {
-        display: block; /* Stack the navigation links vertically */
+        display: block;  /* Stacks the navigation links */
         text-align: center;
+        margin-right: 0;  /* Removes margin since stacking changes layout */
     }
 }
 
@@ -78,17 +94,24 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);  /* Adds a shadow for aesthetic separation from content */
 }
 
 a {
-    transition: transform .2s; /* Animation */
+    transition: transform 0.2s;  /* Smooth transition for hover effects */
 }
 
-a:hover {
-    transform: scale(1.05); /* Zoom on hover */
+a:hover, a:focus {
+    transform: scale(1.05);  /* Slight increase in size on hover/focus for visual feedback */
+    outline: none;  /* Removes the outline to clean up aesthetics, though consider accessibility implications */
 }
 
 .photo-grid img {
     width: 100%;
-    border-radius: 8px; /* Rounded corners for images */
+    border-radius: 8px;  /* Rounded corners for a softer look */
+    transition: transform 0.3s ease-in-out;  /* Smooth transition for image scaling */
+}
+
+.photo-grid img:hover {
+    transform: scale(1.1);  /* Slightly enlarges images on hover for emphasis */
 }
