@@ -27,10 +27,25 @@ header nav ul li a {
 }
 
 #hero {
-    background: url('your-hero-image.jpg') no-repeat center center/cover;
+    position: relative;
+    height: 100vh;
     color: #fff;
-    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+}
+
+#hero video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.hero-content {
+    z-index: 10;
 }
 
 .photo-grid {
