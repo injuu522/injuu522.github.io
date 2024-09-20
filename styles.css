@@ -64,3 +64,16 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+a {
+    transition: transform .2s; /* Animation */
+}
+
+a:hover {
+    transform: scale(1.05); /* Zoom on hover */
+}
+
+.photo-grid img {
+    width: 100%;
+    border-radius: 8px; /* Rounded corners for images */
+}
