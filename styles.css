@@ -100,6 +100,21 @@ header nav ul li a {
     }
 }
 
+.social-links {
+    text-align: center;
+    padding: 20px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    font-size: 24px; /* Size of the icons */
+    color: #0077B5; /* LinkedIn's brand color for the LinkedIn icon */
+}
+
+.social-links a:nth-child(2) {
+    color: #333; /* GitHub's commonly used icon color */
+}
+
 footer {
     background: #333;
     color: #fff;
